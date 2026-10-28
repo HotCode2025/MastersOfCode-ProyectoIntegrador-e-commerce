@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print3d - Registro</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+
+    <header class="header">
+        <a href="index.html" class="logo">Print<span>3d</span></a>
+        <button class="boton-menu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-links">
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <div class="cuenta">
+                <a href="login.html" class="solo-invitado">Iniciar sesión</a>
+                <a href="registro.html" class="boton-chico solo-invitado">Registrarse</a>
+                <span class="saludo solo-logueado">Hola, <strong id="nombre-usuario"></strong></span>
+                <a href="mis-compras.html" class="solo-logueado">Mis compras</a>
+                <button id="boton-salir" class="boton-salir solo-logueado">Salir</button>
+                <a href="carrito.html" class="carrito">Carrito (<span id="contador">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth">
+        <div class="auth-caja">
+            <div class="auth-titulo">
+                <h1>Crear cuenta</h1>
+                <p>Registrate para comprar y seguir tus pedidos</p>
+            </div>
+
+            <p id="mensaje" class="auth-mensaje"></p>
+
+            <form id="form-registro" class="auth-form">
+                <label for="usuario">Nombre de usuario</label>
+                <input type="text" id="usuario" placeholder="Ej: francisco" minlength="3" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="tuemail@gmail.com" required>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+
+                <label for="password2">Repetir contraseña</label>
+                <input type="password" id="password2" placeholder="Repetí la contraseña" minlength="6" required>
+
+                <button type="submit" id="boton-enviar" class="auth-boton">Registrarme</button>
+            </form>
+
+            <p class="auth-pie">¿Ya tenés cuenta? <a href="login.html">Iniciá sesión</a></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-columnas">
+            <div class="footer-columna">
+                <a href="index.html" class="logo">Print<span>3d</span></a>
+                <p>Impresiones 3D a medida.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>contacto@print3d.com</p>
+                <p>+54 9 2622 673467</p>
+                <p>Tunuyán, Mendoza</p>
+            </div>
+        </div>
+        <p class="copy">© 2026 Print3d - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/sesion.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+</html>
