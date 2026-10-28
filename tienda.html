@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print3d - Tienda</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tienda.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">Print<span>3d</span></a>
+        <button class="boton-menu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-links">
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html" class="activo">Tienda</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <div class="cuenta">
+                <a href="login.html" class="solo-invitado">Iniciar sesión</a>
+                <a href="registro.html" class="boton-chico solo-invitado">Registrarse</a>
+                <span class="saludo solo-logueado">Hola, <strong id="nombre-usuario"></strong></span>
+                <a href="mis-compras.html" class="solo-logueado">Mis compras</a>
+                <button id="boton-salir" class="boton-salir solo-logueado">Salir</button>
+                <a href="carrito.html" class="carrito">Carrito (<span id="contador">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="banner">
+        <h1>Tienda</h1>
+        <p>Todos nuestros productos impresos en 3D</p>
+    </section>
+
+    <div class="tienda">
+
+        <aside class="filtros">
+            <h3>Buscar</h3>
+            <input type="text" id="buscador" placeholder="Buscar producto...">
+
+            <h3>Categorías</h3>
+            <ul id="lista-categorias">
+                <li><a href="#" class="categoria-filtro activa" data-categoria="todos">Todos</a></li>
+                <li><a href="#" class="categoria-filtro" data-categoria="figuras">Figuras</a></li>
+                <li><a href="#" class="categoria-filtro" data-categoria="decoracion">Decoración</a></li>
+                <li><a href="#" class="categoria-filtro" data-categoria="llaveros">Llaveros</a></li>
+                <li><a href="#" class="categoria-filtro" data-categoria="repuestos">Repuestos</a></li>
+            </ul>
+            <h3>Material</h3>
+            <label><input type="checkbox" class="material-filtro" value="pla"> PLA</label>
+            <label><input type="checkbox" class="material-filtro" value="petg"> PETG</label>
+            <label><input type="checkbox" class="material-filtro" value="resina"> Resina</label>
+
+            <button id="limpiar-filtros" class="limpiar-filtros">Limpiar filtros</button>
+        </aside>
+
+       
+        <section class="tienda-productos">
+            <div class="tienda-barra">
+                <p id="cantidad-productos">Mostrando 8 productos</p>
+                <select id="ordenar">
+                    <option value="">Ordenar por</option>
+                    <option value="menor">Menor precio</option>
+                    <option value="mayor">Mayor precio</option>
+                    <option value="nombre">Nombre</option>
+                </select>
+            </div>
+
+            <div class="productos" id="grilla-productos">
+                <div class="producto" data-nombre="Dragón articulado" data-categoria="figuras" data-material="pla" data-precio="9500">
+                    <img src="./images/dragon.png" alt="Producto">
+                    <p class="producto-categoria">Figuras · PLA</p>
+                    <h3>Dragón articulado</h3>
+                    <p class="precio">$9.500</p>
+                    <button class="boton-comprar" data-id="1" data-nombre="Dragón articulado" data-precio="9500">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-nombre="Maceta geométrica" data-categoria="decoracion" data-material="petg" data-precio="6200">
+                    <img src="./images/maceta.png" alt="Producto">
+                    <p class="producto-categoria">Decoración · PETG</p>
+                    <h3>Maceta geométrica</h3>
+                    <p class="precio">$6.200</p>
+                    <button class="boton-comprar" data-id="2" data-nombre="Maceta geométrica" data-precio="6200">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-nombre="Llavero personalizado" data-categoria="llaveros" data-material="pla" data-precio="2500">
+                    <img src="./images/llaveros.jpg" alt="Producto">
+                    <p class="producto-categoria">Llaveros · PLA</p>
+                    <h3>Llavero personalizado</h3>
+                    <p class="precio">$2.500</p>
+                    <button class="boton-comprar" data-id="3" data-nombre="Llavero personalizado" data-precio="2500">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-nombre="Lámpara luna" data-categoria="decoracion" data-material="pla" data-precio="14000">
+                    <img src="./images/luna.png" alt="Producto">
+                    <p class="producto-categoria">Decoración · PLA</p>
+                    <h3>Lámpara luna</h3>
+                    <p class="precio">$14.000</p>
+                    <button class="boton-comprar" data-id="4" data-nombre="Lámpara luna" data-precio="14000">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-nombre="Busto romano" data-categoria="figuras" data-material="resina" data-precio="11000">
+                    <img src="./images/busto.png" alt="Producto">
+                    <p class="producto-categoria">Figuras · Resina</p>
+                    <h3>Busto romano</h3>
+                    <p class="precio">$11.000</p>
+                    <button class="boton-comprar" data-id="5" data-nombre="Busto romano" data-precio="11000">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-nombre="Engranaje a medida" data-categoria="repuestos" data-material="petg" data-precio="3800">
+                    <img src="./images/engranaje.png" alt="Producto">
+                    <p class="producto-categoria">Repuestos · PETG</p>
+                    <h3>Engranaje a medida</h3>
+                    <p class="precio">$3.800</p>
+                    <button class="boton-comprar" data-id="6" data-nombre="Engranaje a medida" data-precio="3800">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-nombre="Portalápices" data-categoria="decoracion" data-material="pla" data-precio="4200">
+                    <img src="./images/lapices.png" alt="Producto">
+                    <p class="producto-categoria">Decoración · PLA</p>
+                    <h3>Portalápices</h3>
+                    <p class="precio">$4.200</p>
+                    <button class="boton-comprar" data-id="7" data-nombre="Portalápices" data-precio="4200">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-nombre="Pack 5 llaveros" data-categoria="llaveros" data-material="pla" data-precio="9000">
+                    <img src="./images/llavero.png" alt="Producto">
+                    <p class="producto-categoria">Llaveros · PLA</p>
+                    <h3>Pack 5 llaveros</h3>
+                    <p class="precio">$9.000</p>
+                    <button class="boton-comprar" data-id="8" data-nombre="Pack 5 llaveros" data-precio="9000">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <p id="sin-resultados" class="sin-resultados">No encontramos productos con esos filtros.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-columnas">
+            <div class="footer-columna">
+                <a href="index.html" class="logo">Print<span>3d</span></a>
+                <p>Impresiones 3D a medida.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="nosotros.html">Nosotros</a>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>contacto@print3dd.shop</p>
+                <p>+54 9 2622 673467</p>
+            </div>
+        </div>
+        <p class="copy">© 2026 Print3d - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/sesion.js"></script>
+    <script src="js/tienda.js"></script>
+</body>
+</html>

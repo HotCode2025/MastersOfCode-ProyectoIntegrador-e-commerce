@@ -1,0 +1,132 @@
+.tienda {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+.filtros {
+    width: 230px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #B8B08D;
+    height: fit-content;
+}
+
+.filtros h3 {
+    font-size: 16px;
+    margin: 15px 0 10px;
+    color: #283845;
+}
+
+.filtros h3:first-child {
+    margin-top: 0;
+}
+
+.filtros input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #B8B08D;
+    border-radius: 6px;
+}
+
+.filtros ul {
+    list-style: none;
+}
+
+.filtros li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.filtros li a:hover {
+    color: #F29559;
+}
+
+.filtros li a.activa {
+    color: #F29559;
+    font-weight: bold;
+}
+
+.filtros label {
+    cursor: pointer;
+}
+
+.limpiar-filtros {
+    width: 100%;
+    margin-top: 18px;
+    padding: 9px;
+    background: none;
+    border: 1px solid #283845;
+    border-radius: 6px;
+    color: #283845;
+    cursor: pointer;
+}
+
+.limpiar-filtros:hover {
+    background-color: #283845;
+    color: #fff;
+}
+
+.sin-resultados {
+    display: none;
+    padding: 40px 20px;
+    background-color: #fff;
+    border: 1px dashed #B8B08D;
+    border-radius: 10px;
+    text-align: center;
+    color: #8a8466;
+}
+
+.filtros label {
+    display: block;
+    padding: 4px 0;
+}
+
+.tienda-productos {
+    flex: 1;
+}
+
+.tienda-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tienda-barra select {
+    padding: 8px;
+    border: 1px solid #B8B08D;
+    border-radius: 6px;
+}
+
+.tienda .productos {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+    .tienda {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .filtros {
+        width: 100%;
+    }
+
+    .tienda .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .tienda .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .tienda-barra {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
