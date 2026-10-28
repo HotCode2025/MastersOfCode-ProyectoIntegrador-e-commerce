@@ -1,0 +1,388 @@
+/* colores que hemos usado segun el brief
+   azul oscuro: #202C39
+   azul: #283845
+   beige: #B8B08D
+   amarillo: #F2D492
+   naranja: #F29559
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fdf8ec;
+    color: #202C39;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    background-color: #e9e3cf;
+}
+
+/* botones */
+.boton {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #F29559;
+    color: #202C39;
+    font-weight: bold;
+    border: 2px solid #F29559;
+    border-radius: 6px;
+}
+
+.boton:hover {
+    background-color: #F2D492;
+    border-color: #F2D492;
+}
+
+.boton-borde {
+    background-color: transparent;
+    color: #F2D492;
+    border-color: #F2D492;
+}
+
+.boton-borde:hover {
+    color: #202C39;
+}
+
+.boton-chico {
+    padding: 6px 14px;
+    background-color: #F29559;
+    color: #202C39;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background-color: #202C39;
+    color: #fff;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo span {
+    color: #F29559;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 40px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: #F29559;
+}
+
+.cuenta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 15px;
+}
+
+.carrito {
+    color: #F2D492;
+}
+
+
+.boton-menu {
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-menu span {
+    display: block;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #F2D492;
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.boton-menu.activo span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.boton-menu.activo span:nth-child(2) {
+    opacity: 0;
+}
+
+.boton-menu.activo span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.seccion {
+    padding: 60px 40px;
+}
+
+.seccion-clara {
+    background-color: #F2D492;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.centrado {
+    text-align: center;
+    margin-top: 35px;
+}
+
+
+.banner {
+    padding: 50px 40px;
+    background-color: #283845;
+    color: #fff;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 40px;
+    color: #F2D492;
+    margin-bottom: 10px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #B8B08D;
+}
+
+.producto img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.producto-categoria {
+    font-size: 13px;
+    color: #8a8466;
+    text-transform: uppercase;
+}
+
+.producto h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #F29559;
+    margin-bottom: 12px;
+}
+
+.boton-comprar {
+    width: 100%;
+    padding: 10px;
+    background-color: #283845;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton-comprar:hover {
+    background-color: #F29559;
+    color: #202C39;
+}
+
+
+.boton-comprar.agregado {
+    background-color: #F29559;
+    color: #202C39;
+}
+
+
+.footer {
+    background-color: #202C39;
+    color: #ccc;
+    padding: 40px 40px 20px;
+}
+
+.footer-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-columna h4 {
+    color: #F2D492;
+    margin-bottom: 5px;
+}
+
+.footer-columna a:hover {
+    color: #F29559;
+}
+
+.copy {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #283845;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .boton-menu {
+        display: block;
+    }
+
+    .header-links {
+        flex-direction: column;
+        align-items: stretch;
+        flex: 0 0 100%;
+        margin-left: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .header-links.abierto {
+        max-height: 500px;
+    }
+
+    .menu,
+    .cuenta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+    }
+
+    .menu {
+        margin-top: 15px;
+    }
+
+    .menu a,
+    .cuenta a {
+        padding: 12px 0;
+        border-top: 1px solid #283845;
+    }
+
+    .cuenta .boton-chico {
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        border-top: none;
+    }
+
+    .seccion {
+        padding: 50px 20px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 26px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-columnas {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-columna {
+        align-items: center;
+    }
+}
+.solo-logueado {
+    display: none;
+}
+
+body.logueado .solo-logueado {
+    display: inline-block;
+}
+
+body.logueado .solo-invitado {
+    display: none;
+}
+
+.saludo {
+    color: #F2D492;
+}
+
+.boton-salir {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.boton-salir:hover {
+    color: #F29559;
+}
+
+@media (max-width: 900px) {
+    .saludo,
+    .boton-salir {
+        padding: 12px 0;
+        border-top: 1px solid #283845;
+        text-align: left;
+    }
+}

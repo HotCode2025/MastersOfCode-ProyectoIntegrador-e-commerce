@@ -1,0 +1,192 @@
+.portada {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 40px;
+    background-color: #283845;
+    color: #fff;
+}
+
+.portada-texto {
+    flex: 1;
+}
+
+.portada-texto h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    color: #F2D492;
+}
+
+.portada-texto p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.portada-botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.portada-imagen {
+    flex: 1;
+}
+
+.portada-imagen img {
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #B8B08D;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.categoria {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #B8B08D;
+}
+
+.categoria img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.categoria h3 {
+    padding: 15px;
+    text-align: center;
+}
+
+.categoria:hover {
+    border-color: #F29559;
+}
+
+
+.pasos {
+    display: flex;
+    gap: 25px;
+}
+
+.paso {
+    flex: 1;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border-top: 5px solid #F29559;
+}
+
+.numero {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #283845;
+    color: #F2D492;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.paso h3 {
+    margin-bottom: 10px;
+}
+
+.personalizado {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #202C39;
+    color: #fff;
+}
+
+.personalizado-imagen {
+    flex: 1;
+}
+
+.personalizado-imagen img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.personalizado-texto {
+    flex: 1;
+}
+
+.personalizado-texto h2 {
+    font-size: 32px;
+    color: #F2D492;
+    margin-bottom: 15px;
+}
+
+.personalizado-texto p {
+    margin-bottom: 25px;
+    color: #ddd;
+}
+/* media querys para el responsive */
+
+@media (max-width: 900px) {
+    .portada,
+    .personalizado {
+        padding: 50px 20px;
+    }
+
+    .portada-texto h1 {
+        font-size: 36px;
+    }
+
+    .categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .portada,
+    .personalizado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portada-botones {
+        justify-content: center;
+    }
+
+    .portada-texto h1 {
+        font-size: 30px;
+    }
+
+    .portada-imagen,
+    .personalizado-imagen {
+        width: 100%;
+    }
+
+    .portada-imagen img {
+        height: 250px;
+    }
+
+    .pasos {
+        flex-direction: column;
+    }
+
+    .categoria img {
+        height: 130px;
+    }
+
+    .aviso-pago {
+        padding: 15px 45px 15px 20px;
+    }
+}
+
+.aviso-pago a {
+    color: inherit;
+    text-decoration: underline;
+}

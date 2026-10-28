@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print3d</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <a href="index.html" class="logo">Print<span>3d</span></a>
+        <button class="boton-menu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-links">
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="">Tienda</a>
+                <a href="">Nosotros</a>
+                <a href="">Contacto</a>
+            </nav>
+            <div class="cuenta">
+                <a href="login.html" class="solo-invitado">Iniciar sesión</a>
+                <a href="registro.html" class="boton-chico solo-invitado">Registrarse</a>
+                <span class="saludo solo-logueado">Hola, <strong id="nombre-usuario"></strong></span>
+                <a href="mis-compras.html" class="solo-logueado">Mis compras</a>
+                <button id="boton-salir" class="boton-salir solo-logueado">Salir</button>
+                <a href="carrito.html" class="carrito">Carrito (<span id="contador">0</span>)</a>
+            </div>
+        </div>
+    </header>
+    <!-- portada -->
+    <section class="portada">
+        <div class="portada-texto">
+            <h1>Damos forma a tus ideas en 3D</h1>
+            <p>Figuras, decoración, repuestos y piezas personalizadas impresas con la mejor calidad.</p>
+            <div class="portada-botones">
+                <a href="tienda.html" class="boton">Ver tienda</a>
+                <a href="#personalizado" class="boton boton-borde">Pedir diseño</a>
+            </div>
+        </div>
+        <div class="portada-imagen">
+            <img src="./images/banner.jpg" alt="Impresora 3D">
+        </div>
+    </section>
+
+    <!-- categorias -->
+    <section class="seccion">
+        <h2 class="titulo">Categorías</h2>
+        <div class="categorias">
+            <a href="tienda.html" class="categoria">
+                <img src="./images/FIGURAS.jpg" alt="Figuras">
+                <h3>Figuras</h3>
+            </a>
+            <a href="tienda.html" class="categoria">
+                <img src="./images/decoracion.jpg" alt="Decoración">
+                <h3>Decoración</h3>
+            </a>
+            <a href="tienda.html" class="categoria">
+                <img src="./images/llaveros.jpg" alt="Llaveros">
+                <h3>Llaveros</h3>
+            </a>
+            <a href="tienda.html" class="categoria">
+                <img src="./images/repuestos.jpg" alt="Repuestos">
+                <h3>Repuestos</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- productos destacados -->
+    <section class="seccion seccion-clara">
+        <h2 class="titulo">Productos destacados</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="./images/dragon.png" alt="Producto">
+                <p class="producto-categoria">Figuras</p>
+                <h3>Dragón articulado</h3>
+                <p class="precio">$9.500</p>
+                <button class="boton-comprar" data-id="1" data-nombre="Dragón articulado" data-precio="9500">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./images/maceta.png" alt="Producto">
+                <p class="producto-categoria">Decoración</p>
+                <h3>Maceta geométrica</h3>
+                <p class="precio">$6.200</p>
+                <button class="boton-comprar" data-id="2" data-nombre="Maceta geométrica" data-precio="6200">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./images/llavero.png" alt="Producto">
+                <p class="producto-categoria">Llaveros</p>
+                <h3>Llavero personalizado</h3>
+                <p class="precio">$2.500</p>
+                <button class="boton-comprar" data-id="3" data-nombre="Llavero personalizado" data-precio="2500">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="./images/luna.png" alt="Producto">
+                <p class="producto-categoria">Decoración</p>
+                <h3>Lámpara luna</h3>
+                <p class="precio">$14.000</p>
+                <button class="boton-comprar" data-id="4" data-nombre="Lámpara luna" data-precio="14000">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="centrado">
+            <a href="" class="boton">Ver todos los productos</a>
+        </div>
+    </section>
+
+    <!-- como funciona -->
+    <section class="seccion">
+        <h2 class="titulo">¿Cómo funciona?</h2>
+        <div class="pasos">
+            <div class="paso">
+                <span class="numero">1</span>
+                <h3>Elegí tu producto</h3>
+                <p>Buscá en la tienda o mandanos tu propio diseño.</p>
+            </div>
+            <div class="paso">
+                <span class="numero">2</span>
+                <h3>Lo imprimimos</h3>
+                <p>Usamos materiales de calidad como PLA y PETG.</p>
+            </div>
+            <div class="paso">
+                <span class="numero">3</span>
+                <h3>Te lo enviamos</h3>
+                <p>Hacemos envíos a todo el país o podés retirarlo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- pedido personalizado -->
+    <section class="personalizado" id="personalizado">
+        <div class="personalizado-imagen">
+            <img src="" alt="Pieza personalizada">
+        </div>
+        <div class="personalizado-texto">
+            <h2>¿Tenés una idea propia?</h2>
+            <p>Mandanos tu archivo STL o contanos qué necesitás y te pasamos un presupuesto sin cargo.</p>
+            <a href="" class="boton">Pedir presupuesto</a>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-columnas">
+            <div class="footer-columna">
+                <a href="index.html" class="logo">Print<span>3d</span></a>
+                <p>Impresiones 3D a medida.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="">Tienda</a>
+                <a href="">Nosotros</a>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>contacto@print3d.com</p>
+                <p>+54 9 2622 673467</p>
+            </div>
+        </div>
+        <p class="copy">© 2026 Print3d - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/sesion.js"></script>
+</body>
+</html>
