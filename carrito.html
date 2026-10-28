@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print3d - Carrito</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="shortcut icon" href="./images/logo-print3d.jpg" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Print<span>3d</span></a>
+        <button class="boton-menu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="header-links">
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <div class="cuenta">
+                <a href="login.html" class="solo-invitado">Iniciar sesión</a>
+                <a href="registro.html" class="boton-chico solo-invitado">Registrarse</a>
+                <span class="saludo solo-logueado">Hola, <strong id="nombre-usuario"></strong></span>
+                <a href="mis-compras.html" class="solo-logueado">Mis compras</a>
+                <button id="boton-salir" class="boton-salir solo-logueado">Salir</button>
+                <a href="carrito.html" class="carrito">Carrito (<span id="contador">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="banner">
+        <h1>Tu carrito</h1>
+        <p>Revisá tus productos antes de pagar</p>
+    </section>
+
+    <section class="carrito-pagina">
+
+
+        <div id="carrito-vacio" class="carrito-vacio">
+            <h2>Tu carrito está vacío</h2>
+            <p>Todavía no agregaste ningún producto.</p>
+            <a href="tienda.html" class="boton">Ir a la tienda</a>
+        </div>
+
+
+        <div id="carrito-lleno" class="carrito-contenido">
+            <div id="lista-carrito" class="lista-carrito">
+            </div>
+
+            <div class="resumen">
+                <h3>Resumen</h3>
+                <div class="resumen-fila">
+                    <span>Productos</span>
+                    <span id="resumen-cantidad">0</span>
+                </div>
+                <div class="resumen-fila resumen-total">
+                    <span>Total</span>
+                    <span id="resumen-total">$0</span>
+                </div>
+                <button id="boton-pagar" class="boton-pagar">Pagar con Mercado Pago</button>
+                <button id="boton-vaciar" class="boton-vaciar">Vaciar carrito</button>
+                <p id="mensaje-pago" class="mensaje-pago"></p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-columnas">
+            <div class="footer-columna">
+                <a href="index.html" class="logo">Print<span>3d</span></a>
+                <p>Impresiones 3D a medida.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>contacto@print3dd.shop</p>
+                <p>+54 9 2622 673467</p>
+                <p>Tunuyán, Mendoza</p>
+            </div>
+        </div>
+        <p class="copy">© 2026 Print3d - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/sesion.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/carrito-pagina.js"></script>
+</body>
+</html>
