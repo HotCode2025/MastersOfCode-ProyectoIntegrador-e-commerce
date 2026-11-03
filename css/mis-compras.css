@@ -1,0 +1,113 @@
+.compras-pagina {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.compras-cargando,
+.compras-error {
+    text-align: center;
+    color: #8a8466;
+}
+
+.sin-compras {
+    display: none;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.sin-compras h2 {
+    color: #283845;
+    margin-bottom: 10px;
+}
+
+.sin-compras p {
+    margin-bottom: 25px;
+}
+
+.lista-compras {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.compra {
+    background-color: #fff;
+    border: 1px solid #B8B08D;
+    border-left: 6px solid #F29559;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.compra-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    background-color: #fdf8ec;
+    border-bottom: 1px solid #eee;
+}
+
+.compra-fecha {
+    font-weight: bold;
+    color: #283845;
+}
+
+.compra-numero {
+    font-size: 14px;
+    color: #8a8466;
+    margin-top: 3px;
+}
+
+.compra-estado {
+    padding: 5px 12px;
+    background-color: #d4edda;
+    color: #1e5631;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.compra-productos {
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.compra-productos li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0ebdc;
+}
+
+.compra-productos li:last-child {
+    border-bottom: none;
+}
+
+.compra-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #202C39;
+    color: #fff;
+    font-weight: bold;
+}
+
+.compra-total span:last-child {
+    color: #F29559;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .compras-pagina {
+        padding: 40px 15px;
+    }
+
+    .compra-cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
