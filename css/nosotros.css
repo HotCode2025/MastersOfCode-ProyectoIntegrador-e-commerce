@@ -1,0 +1,148 @@
+.sobre {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+}
+
+.sobre-imagen {
+    flex: 1;
+}
+
+.sobre-imagen img {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #F29559;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #283845;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.sobre-texto strong {
+    color: #F29559;
+}
+
+.sobre-datos {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.dato {
+    flex: 1;
+    padding: 20px;
+    background-color: #283845;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.dato h3 {
+    color: #F2D492;
+    margin-bottom: 8px;
+}
+
+.dato p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* equipo */
+.titulo-equipo {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #283845;
+    margin-bottom: 20px;
+}
+
+.equipo-texto {
+    max-width: 560px;
+    margin: 0 auto 40px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.equipo-texto strong {
+    color: #F29559;
+}
+
+.equipo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.miembro {
+    width: 200px;
+    padding: 25px 15px;
+    background-color: #fff;
+    border-radius: 12px;
+    border-bottom: 4px solid #F29559;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(32, 44, 57, 0.1);
+}
+
+.miembro img {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #F2D492;
+}
+
+.miembro h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.miembro p {
+    font-size: 14px;
+    color: #F29559;
+}
+
+@media (max-width: 600px) {
+    .sobre,
+    .sobre-datos {
+        flex-direction: column;
+    }
+
+    .sobre {
+        padding: 40px 20px;
+    }
+
+    .sobre-imagen {
+        width: 100%;
+    }
+
+    .sobre-imagen img {
+        height: 250px;
+    }
+
+    .sobre-texto h2,
+    .titulo-equipo {
+        font-size: 26px;
+    }
+
+    .miembro {
+        width: 45%;
+    }
+}

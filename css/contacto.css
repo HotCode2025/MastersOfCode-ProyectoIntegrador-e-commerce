@@ -1,0 +1,172 @@
+.contacto-portada {
+    padding: 70px 40px 120px;
+    background-color: #202C39;
+    color: #ddd;
+    text-align: center;
+}
+
+.contacto-etiqueta {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #F29559;
+    border-radius: 20px;
+    color: #F29559;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contacto-portada h1 {
+    font-size: 42px;
+    color: #F2D492;
+    margin-bottom: 15px;
+}
+
+.contacto-portada p {
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contacto-tarjetas {
+    display: flex;
+    gap: 25px;
+    padding: 0 40px;
+    margin-top: -70px;
+}
+
+.tarjeta-contacto {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(32, 44, 57, 0.15);
+}
+
+.tarjeta-numero {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    color: #B8B08D;
+    margin-bottom: 10px;
+}
+
+.tarjeta-contacto h3 {
+    font-size: 20px;
+    color: #283845;
+    margin-bottom: 8px;
+}
+
+.tarjeta-contacto p {
+    margin-bottom: 20px;
+}
+
+.tarjeta-link {
+    color: #F29559;
+    font-weight: bold;
+    border-bottom: 2px solid #F29559;
+}
+
+.tarjeta-destacada {
+    background-color: #F29559;
+}
+
+.tarjeta-destacada .tarjeta-numero,
+.tarjeta-destacada h3,
+.tarjeta-destacada .tarjeta-link {
+    color: #202C39;
+    border-color: #202C39;
+}
+
+.ubicacion {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 40px;
+}
+
+.ubicacion-texto {
+    flex: 1;
+}
+
+.ubicacion-texto h2 {
+    font-size: 32px;
+    color: #283845;
+    margin-bottom: 15px;
+}
+
+.ubicacion-texto p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.ubicacion-texto strong {
+    color: #F29559;
+}
+
+.ubicacion-mapa {
+    flex: 2;
+}
+
+.ubicacion-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 380px;
+    border: 4px solid #F2D492;
+    border-radius: 12px;
+}
+
+.contacto-cta {
+    padding: 50px 40px;
+    background-color: #F2D492;
+    text-align: center;
+}
+
+.contacto-cta h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contacto-cta p {
+    margin-bottom: 25px;
+}
+
+@media (max-width: 900px) {
+    .contacto-tarjetas {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .ubicacion {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .ubicacion-texto,
+    .ubicacion-mapa {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contacto-portada {
+        padding: 50px 20px 100px;
+    }
+
+    .contacto-portada h1 {
+        font-size: 30px;
+    }
+
+    .ubicacion-mapa iframe {
+        height: 280px;
+    }
+
+    .contacto-cta {
+        padding: 40px 20px;
+    }
+
+    .contacto-cta h2 {
+        font-size: 24px;
+    }
+}
