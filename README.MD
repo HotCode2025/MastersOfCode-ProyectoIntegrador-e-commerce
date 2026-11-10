@@ -237,6 +237,6 @@ Las claves secretas **no están en el código**: se cargan en Vercel, en **Setti
 
 <br>
 
-Hecho con 🧡 en Mendoza
+Hecho con 🧡 por MastersOfCode
 
 </div>
